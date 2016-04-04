@@ -10,6 +10,14 @@ namespace AbstractFactory
     {
         static void Main(string[] args)
         {
+            PetFactory factory = new PetFactory();
+            IPet Pet = factory.CreatePet("Bow");
+            Console.WriteLine(Pet.petSound());
+
+            IPet AnotherPet = factory.CreatePet("Meow");
+            Console.WriteLine(AnotherPet.petSound());
+
+            Console.ReadLine();
         }
     }
 }
